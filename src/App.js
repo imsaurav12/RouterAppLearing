@@ -19,11 +19,12 @@ function App() {
         </ul>
       </nav>
      <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/about" element={<About/>}/>
-      <Route path="/support" element={<Support/>}/>
-      <Route path="/labs" element={<Labs/>}/>
-      <Route path="*" element={<NotFound/>}/>
+      <Route path="/" element={<Home/>}>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/support" element={<Support/>}/>
+        <Route path="/labs" element={<Labs/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Route>
     </Routes>
     </div>
   );
