@@ -1,11 +1,17 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    function clickHandler(){
+        // move to about page
+        navigate("/about");
+    }
   return (
     <div>
-      This is Home Page.
-       <Outlet/> {/* //Taki child component render ho ske*/}
+        <div>This is Home Page.</div>
+        <button onClick={clickHandler}>Move to About Page</button>
     </div> 
   )
 }

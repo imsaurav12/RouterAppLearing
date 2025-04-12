@@ -6,6 +6,7 @@ import Support from './components/Support';
 import Home from './components/Home'
 import About from './components/About';
 import { Link } from 'react-router-dom';
+import MainHeader from './components/MainHeader';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         </ul>
       </nav>
      <Routes>
-      <Route path="/" element={<Home/>}>
+      <Route path="/" element={<MainHeader/>}>
+        <Route index element={<Home/>} />
         <Route path="/about" element={<About/>}/>
         <Route path="/support" element={<Support/>}/>
         <Route path="/labs" element={<Labs/>}/>
